@@ -172,6 +172,13 @@ class Car {
    */
   refuel(gallons) {
     // ✨ implement
+    const gallonsThatFit = this.tankSize - this.tank
+    if (gallons <= gallonsThatFit) {
+      this.tank = this.tank + gallons
+    } else {
+      this.tank = this.tankSize
+    }
+    return this.tank * this.mpg
   }
 }
 // LITTLE TEST TO TEST THE DRIVE MAX TANK 
